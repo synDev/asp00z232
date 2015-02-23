@@ -1,0 +1,35 @@
+4671 ice diamond to ice giants for furnace in sand dungeon
+
+
+//Not done
+change bind message
+fix bank space for admins
+reset skills when u do other skills
+fix mining rates and make axes apply to mining
+fire making bug , if u cut, then light then light again u keep log
+27 logs, then chop, tree doesn't die
+al-kharid guards are aggressive when attack
+Bug with restless ghosts
+fix shops being over filled
+priest gown goes to weapon slot
+smithing guide - iron takes u to slayer
+oaks don't die
+fix reset woodcutt on dree deplete
+items in general store don't go away.
+champions door is glitched
+9662 object id for getting spade
+add beer
+Npcs are missing block animations
+redo npc animations
+sheep shearring
+studded body = 20 def req
+
+by Papa:
+ * energy run out too fast!
+ * scorpions got wrong animations
+ * npc doesnt atk while chasing even withing close range
+ * if npc gets stuck while chasing, it will just stand still even when you come near it.
+ * talking to alkharid border guards without being close to the gate makes you not cross and lose the 10 gp.
+ * can't climb stairs on lumby castle
+ * "squeeze-through" fence(3240, 3190) is a f2p short-cut non agility related.
+ * if while walking you click on "run on" button it just keep walking until next click.

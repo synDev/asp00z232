@@ -1,0 +1,16 @@
+//Add scorpion catcher and mystic making from npc
+//More shops all around
+//Maybe slagilith npc boss, 1802 1804
+//Fix lighting fires on ground
+//fix custom objects clipping and following through
+//fix object facing
+//add npc to take to rfd mini
+//finish misc.
+//fix npc attacking with sizes
+//fix constant drops (bones, stuff like taht)
+//fix mining multiple ores not respawning ore
+//look at manhole and mining guild door.
+//make talismans easier to get
+//make herbs easier to get
+//Essence pouches
+//add tiara making
