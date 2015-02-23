@@ -121,15 +121,6 @@ public class Client extends Player {
         return false;
     }
 
-    /**
-     * Shakes the player's screen.
-     * Parameters 1, 0, 0, 0 to reset.
-     *
-     * @param verticleAmount   How far the up and down shaking goes (1-4).
-     * @param verticleSpeed    How fast the up and down shaking is.
-     * @param horizontalAmount How far the left-right tilting goes.
-     * @param horizontalSpeed  How fast the right-left tiling goes..
-     */
     public boolean isOnline(String name) {
         for (Player p : PlayerHandler.players) {
             if (p != null) {
@@ -191,6 +182,15 @@ public class Client extends Player {
     public int tmpNWCY[] = new int[walkingQueueSize];
     public int tmpNWCX[] = new int[walkingQueueSize];
 
+    /**
+     * Shakes the player's screen.
+     * Parameters 1, 0, 0, 0 to reset.
+     *
+     * @param verticleAmount   How far the up and down shaking goes (1-4).
+     * @param verticleSpeed    How fast the up and down shaking is.
+     * @param horizontalAmount How far the left-right tilting goes.
+     * @param horizontalSpeed  How fast the right-left tiling goes..
+     */
     public void shakeScreen(int verticleAmount, int verticleSpeed, int horizontalAmount, int horizontalSpeed) {
         outStream.createFrame(35); // Creates frame 35.
         outStream.writeByte(verticleAmount);
