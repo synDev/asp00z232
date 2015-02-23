@@ -381,6 +381,7 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/f2p" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="LayoutCode.rearrangeEntries" value="false" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager" selected="Application.client">
     <configuration default="true" type="Remote" factoryName="Remote">
