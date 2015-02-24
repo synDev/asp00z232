@@ -1,6 +1,7 @@
 package server.game.objects.ladders;
 
 import server.content.quests.misc.Tutorialisland;
+import server.event.*;
 import server.game.players.Client;
 import server.game.players.DialogueHandler;
 
@@ -72,12 +73,33 @@ public class LadderConfigurations {
 
                 }
                 return true;
-            case 11741:
             case 1746:
+                c.startAnimation(828);
+                c.cantClimbLadder = true;
+                EventManager.getSingleton().addEvent(new Event() {
+                    @Override
+                    public void execute(EventContainer p) {
+                        if (c != null && c.outStream != null)
+                            c.getPA().movePlayer(2763, 2951, 1);
+                        p.stop();
+                    }
+                }, 1000);
+                CycleEventHandler.getSingleton().addEvent(c, new CycleEvent() {
+                    @Override
+                    public void execute(CycleEventContainer container) {
+                        container.stop();
+                    }
 
+                    @Override
+                    public void stop() {
+                        if (c != null && c.outStream != null)
+                            c.cantClimbLadder = false;
+                    }
+                }, 3);
+                break;
+            case 11741:
                 if (c.heightLevel > 0) {
                     LadderHandler.climbLadder(c, c.absX, c.absY, c.heightLevel, c.heightLevel - 1);
-
                 }
                 return true;
             case 1738:

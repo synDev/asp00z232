@@ -190,9 +190,12 @@ public class DialogueHandler {
                 break;
             case 17:
                 sendNpcChat2(c, "How would you like me to take you to an old", "burial ground?", c.talkingNpc, "Strange Old Man");
-                c.nextChat = 666;
+                c.nextChat = 50000;
                 break;
-            case 666:
+            case 50000:
+                if (c.knightS > 0) {
+                    c.knightS = 0;
+                }
                 c.getPA().showInterface(8677);
                 CycleEventHandler.getSingleton().addEvent(c, new CycleEvent() {
                     @Override
