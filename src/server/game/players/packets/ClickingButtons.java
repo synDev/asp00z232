@@ -2038,11 +2038,6 @@ public class ClickingButtons implements PacketType {
                 c.getCombat().activatePrayer(22);
             case 2173: // smite
                 c.getCombat().activatePrayer(23);
-                for (int p = 21; p < 24; p++) {
-                    c.prayerActive[p] = false;
-                    c.getPA().sendFrame36(c.PRAYER_GLOW[p], 0);
-
-                }
                 break;
             case 13092:
                 if (System.currentTimeMillis() - c.lastButton < 400) {

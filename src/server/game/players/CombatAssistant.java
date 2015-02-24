@@ -121,15 +121,15 @@ public class CombatAssistant {
                 c.getPA().stepAwayNew();
                 return;
             }
-            if (c.npcIndex > 0) {
-                if (NPCHandler.pathBlocked(o, c)) {
-                    if ((c.usingBow || c.usingMagic || /*usingOtherRangeWeapons || */c.autocasting/* || handCannon*/))
-                        PathFinder.getPathFinder().findRoute(c, o.absX, o.absY, false, 8, 8);
-                    if (!c.usingBow && !c.usingMagic && !c.autocasting)
-                        PathFinder.getPathFinder().findRoute(c, o.absX, o.absY, false, 1, 1);
-                    return;
-                }
-            }
+           // if (c.npcIndex > 0) {
+          //      if (NPCHandler.pathBlocked(o, c)) {
+           //         if ((c.usingBow || c.usingMagic || /*usingOtherRangeWeapons || */c.autocasting/* || handCannon*/))
+           //             PathFinder.getPathFinder().findRoute(c, o.absX, o.absY, false, 8, 8);
+            //        if (!c.usingBow && !c.usingMagic && !c.autocasting)
+            //            PathFinder.getPathFinder().findRoute(c, o.absX, o.absY, false, 1, 1);
+            //        return;
+           //     }
+           // }
             if (NPCHandler.npcs[i].underAttackBy > 0 && NPCHandler.npcs[i].underAttackBy != c.playerId && !NPCHandler.npcs[i].inMulti()) {
                 c.npcIndex = 0;
                 c.sendMessage("This monster is already in combat.");
@@ -194,8 +194,7 @@ public class CombatAssistant {
                     resetPlayerAttack();
                     return;
                 }
-                if ((!c.goodDistance(c.getX(), c.getY(), NPCHandler.npcs[i].getX(), NPCHandler.npcs[i].getY(), 2) && (usingHally() && !usingOtherRangeWeapons && !usingBow && !c.usingMagic)) || (!c.goodDistance(c.getX(), c.getY(), NPCHandler.npcs[i].getX(), NPCHandler.npcs[i].getY(), 4) && (usingOtherRangeWeapons && !usingBow && !c.usingMagic)) || (!c.goodDistance(c.getX(), c.getY(), NPCHandler.npcs[i].getX(), NPCHandler.npcs[i].getY(), 1) && (!usingOtherRangeWeapons && !usingHally() && !usingBow && !c.usingMagic)) || ((!c.goodDistance(c.getX(), c.getY(), NPCHandler.npcs[i].getX(), NPCHandler.npcs[i].getY(), 8) && (usingBow || c.usingMagic)))
-                        ) {
+                if ((!c.goodDistance(c.getX(), c.getY(), NPCHandler.npcs[i].getX(), NPCHandler.npcs[i].getY(), NPCHandler.npcSizes(i)+1) && (usingHally() && !usingOtherRangeWeapons && !usingBow && !c.usingMagic)) || (!c.goodDistance(c.getX(), c.getY(), NPCHandler.npcs[i].getX(), NPCHandler.npcs[i].getY(), NPCHandler.npcSizes(i)+3) && (usingOtherRangeWeapons && !usingBow && !c.usingMagic)) || (!c.goodDistance(c.getX(), c.getY(), NPCHandler.npcs[i].getX(), NPCHandler.npcs[i].getY(), NPCHandler.npcSizes(i)) && (!usingOtherRangeWeapons && !usingHally() && !usingBow && !c.usingMagic)) || ((!c.goodDistance(c.getX(), c.getY(), NPCHandler.npcs[i].getX(), NPCHandler.npcs[i].getY(), NPCHandler.npcSizes(i)+7) && (usingBow || c.usingMagic)))) {
                     c.attackTimer = 2;
                     return;
                 }
@@ -743,11 +742,11 @@ public class CombatAssistant {
                     c.slayerMaskEffect = false;
                     Client o = (Client) PlayerHandler.players[c.playerIndex];
                     if (PlayerAssistant.pathBlocked(c, o)) {
-                        if ((c.usingBow || c.usingMagic || /*usingOtherRangeWeapons || */c.autocasting/* || handCannon*/))
-                            PathFinder.getPathFinder().findRoute(c, o.absX, o.absY, false, 8, 8);
-                        if (!c.usingBow && !c.usingMagic && /*!usingOtherRangeWeapons && */!c.autocasting)
-                            PathFinder.getPathFinder().findRoute(c, o.absX, o.absY, false, 1, 1);
-                        return;
+                       if ((c.usingBow || c.usingMagic || /*usingOtherRangeWeapons || */c.autocasting/* || handCannon*/))
+                           PathFinder.getPathFinder().findRoute(c, o.absX, o.absY, false, 8, 8);
+                       if (!c.usingBow && !c.usingMagic && /*!usingOtherRangeWeapons && */!c.autocasting)
+                           PathFinder.getPathFinder().findRoute(c, o.absX, o.absY, false, 1, 1);
+                       return;
                     }
                 }
 
@@ -2044,7 +2043,25 @@ public class CombatAssistant {
         }
 
     }
-
+    public void npcMeleeDamage(int damage) {
+        int i = c.npcIndex;
+        int bonusAttack = getBonusAttack(i);
+        if (Misc.random(Server.npcHandler.npcs[i].defence) > 10 + Misc.random(calculateMeleeAttack()) + bonusAttack) {
+            damage /= 2;
+        } else if (Server.npcHandler.npcs[i].npcType == 2881 || Server.npcHandler.npcs[i].npcType == 2882) {
+            damage /= 2;
+        }
+        if (Server.npcHandler.npcs[i].HP - damage < 0) {
+            damage = Server.npcHandler.npcs[i].HP;
+        }
+        Server.npcHandler.npcs[i].underAttack = true;
+        Server.npcHandler.npcs[i].hitDiff = damage;
+        Server.npcHandler.npcs[i].HP -= damage;
+        Server.npcHandler.npcs[i].hitUpdateRequired = true;
+        c.totalDamageDealt += damage;
+        c.killingNpcIndex = c.oldNpcIndex;
+        Server.npcHandler.npcs[i].updateRequired = true;
+    }
     public void npcMageDamage(int damage) {
         int i = c.npcIndex;
         int bonusAttack = getBonusAttack(i);
@@ -2149,14 +2166,14 @@ public class CombatAssistant {
                                     n.gfx100(341);
                                     break;
                                 case 0:
-                                    npcMageDamage((int) (calculateMeleeMaxHit() * multiplier));
+                                    npcMeleeDamage((int) (calculateMeleeMaxHit() * multiplier));
                                     c.stop();
                                     break;
                             }
                             timer--;
                         }
                     }, 200);
-                    c.attackTimer = 3;
+                    c.attackTimer = 2;
                 }
                 break;
             case 4151: // whip
@@ -2179,9 +2196,9 @@ public class CombatAssistant {
                                 case 0:
                                     int whip = Misc.random(1);
                                     if (whip == 0)
-                                        npcMageDamage((calculateMeleeMaxHit()));
+                                        npcMeleeDamage((calculateMeleeMaxHit()));
                                     else if (whip == 1)
-                                        npcMageDamage(0);
+                                        npcMeleeDamage(0);
                                     c.stop();
                                     break;
                             }
@@ -2887,7 +2904,7 @@ public class CombatAssistant {
                     return 412;
             }
         }
-        if (weaponName.startsWith("dragon dagger")) {
+        if (weaponName.startsWith("dragon dagger")||weaponName.startsWith("drag dagger")) {
             return 402;
         }
         if (weaponName.contains("karil")) {
@@ -3047,7 +3064,7 @@ public class CombatAssistant {
             case 11730:
                 return 4;
             case 4500:
-                return 3;
+                return 2;
             case 6528:
                 return 7;
         }

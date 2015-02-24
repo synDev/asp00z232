@@ -197,6 +197,7 @@ public class ClickNPC implements PacketType {
                             if ((c.clickNpcType == 1) && NPCHandler.npcs[c.npcClickIndex] != null) {
                                 if (c.goodDistance(c.getX(), c.getY(), NPCHandler.npcs[c.npcClickIndex].getX(), NPCHandler.npcs[c.npcClickIndex].getY(), NPCSize.getNPCSize(c.npcType))) {
                                     c.turnPlayerTo(NPCHandler.npcs[c.npcClickIndex].getX(), NPCHandler.npcs[c.npcClickIndex].getY());
+                                    if (c.npcType != 1395)
                                     NPCHandler.npcs[c.npcClickIndex].facePlayer(c.playerId);
                                     c.getActions().firstClickNpc(c.npcType);
                                     container.stop();

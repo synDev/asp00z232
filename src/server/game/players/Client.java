@@ -455,7 +455,7 @@ public class Client extends Player {
         sendMessage("Welcome to " + Config.SERVER_NAME + ".");
         sendMessage("Toggle loot showing by typing @blu@::showloot");
         sendMessage("To see the most recent updates type @blu@::changelog.");
-        sendMessage("@blu@Until February 24, all npcs have chance to drop party hats!");
+        sendMessage("@blu@Until February 28, all npcs have chance to drop a santa hat!");
         sendMessage("Visit forums at @blu@http://shilovillageos.tk/");
         if (Config.doubleEXPWeekend == true) {
             sendMessage("@blu@Enjoy Double EXP Weekend!");
@@ -726,11 +726,11 @@ public class Client extends Player {
             getPA().sendFrame126("@red@Offline", 28001);
         }
         if (isOnline("mod syn")) {
-            getPA().sendFrame126("Mod syn", 28002);
+            getPA().sendFrame126("Mod Syn", 28002);
             getPA().sendFrame126("@gre@Online", 28003);
         } else {
             getPA().sendFrame126("@red@Offline", 28003);
-            getPA().sendFrame126("Mod syn", 28002);
+            getPA().sendFrame126("Mod Syn", 28002);
         }
         if (isOnline(" ")) {
             getPA().sendFrame126("@whi@Open", 28004);//3rd

@@ -8,7 +8,7 @@ public class HerbCleaning extends HerbData {
         for (int i = 0; i < grimyHerbs.length; i++) {
             if (itemId == grimyHerbs[i][0]) {
                 if (c.playerLevel[15] < grimyHerbs[i][2]) {
-                    c.sendMessage("You need an herblore level of " + grimyHerbs[i][2] + " to clean this herb.");
+                    c.sendMessage("You don't have the herblore level to clean this herb.");
                     return;
                 }
                 c.getItems().deleteItem(itemId, itemSlot, 1);

@@ -403,7 +403,7 @@ public class NPC extends Mobile {
     }
 
     public boolean inWild() {
-        if (absX >= 2981 && absX <= 2759 && absY >= 2878 && absY <= 2939) {
+        if (absX >= 2757 && absX <= 2990 && absY >= 2871 && absY <= 2940) {
             return true;
         }
         return false;
