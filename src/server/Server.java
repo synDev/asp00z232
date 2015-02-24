@@ -78,9 +78,9 @@ public class Server {
 
 	static {
 		if(!Config.SERVER_DEBUG) {
-			serverlistenerPort = 43594;
+			serverlistenerPort = 5555;
 		} else {
-			serverlistenerPort = 43594;
+			serverlistenerPort = 5555;
 		}
 		cycleRate = 600;
 		shutdownServer = false;

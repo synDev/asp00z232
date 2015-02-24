@@ -189,8 +189,21 @@ public class DialogueHandler {
                 c.nextChat = 0;
                 break;
             case 17:
-                sendNpcChat1(c, "How would you like me to take you to an old burial ground?", c.talkingNpc, "Strange Old Man");
-                c.nextChat = 18;
+                sendNpcChat2(c, "How would you like me to take you to an old", "burial ground?", c.talkingNpc, "Strange Old Man");
+                c.nextChat = 666;
+                break;
+            case 666:
+                c.getPA().showInterface(8677);
+                CycleEventHandler.getSingleton().addEvent(c, new CycleEvent() {
+                    @Override
+                    public void execute(CycleEventContainer container) {
+                        c.getPA().movePlayer(3565, 3307, 0);
+                        container.stop();
+                    }
+                    @Override
+                    public void stop() {
+                    }
+                }, 5);
                 break;
             case 18:
                 sendOption5(c, "Fire altar", "Body altar", "Cosmic altar", "Astral altar", "More");

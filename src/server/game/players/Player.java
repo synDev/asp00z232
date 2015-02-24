@@ -835,7 +835,12 @@ public abstract class Player extends Mobile {
                         && ((objectY + j) == playerY
                         || (objectY - j) == playerY || objectY == playerY)) {
                     return true;
+                } else if (objectX == playerX - 1 || objectX == playerX + 1 || objectY == playerY - 1 || objectY == playerY + 1
+                        || objectX == playerX - 1 && objectY == playerY - 1 || objectX == playerX + 1 && objectY == playerY + 1
+                        || objectX == playerX - 1 && objectY == playerY + 1 || objectX == playerX + 1 && objectY == playerY - 1) {
+                    return true;
                 }
+
             }
         }
         return false;

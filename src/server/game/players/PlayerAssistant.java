@@ -1006,6 +1006,21 @@ public class PlayerAssistant {
 /*/
 
 
+
+    public void sendString(String s, int id) {
+        if (!c.checkPacket126Update(s, id)) {
+            int bytesSaved = (s.length() + 4);
+            return;
+        }
+        if (c.getOutStream() != null && c != null) {
+            c.getOutStream().createFrameVarSizeWord(126);
+            c.getOutStream().writeString(s);
+            c.getOutStream().writeWordA(id);
+            c.getOutStream().endFrameVarSizeWord();
+            c.flushOutStream();
+        }
+    }
+
     public void sendFrame126(String s, int id) {
         if (!c.checkPacket126Update(s, id)) {
             int bytesSaved = (s.length() + 4);
@@ -1129,6 +1144,15 @@ public class PlayerAssistant {
         }
     }
 
+    public void sendItemOnInterface(int id, int zoom, int model) {
+        if (c.getOutStream() != null && c != null) {
+            c.getOutStream().createFrame(246);
+            c.getOutStream().writeWordBigEndian(id);
+            c.getOutStream().writeWord(zoom);
+            c.getOutStream().writeWord(model);
+            c.flushOutStream();
+        }
+    }
 
     public void sendFrame246(int MainFrame, int SubFrame, int SubFrame2) {
         //synchronized(c) {
