@@ -61,9 +61,7 @@
     <favorites_list name="Project F2P" />
   </component>
   <component name="FileEditorManager">
-<<<<<<< HEAD
     <leaf />
-=======
     <leaf>
       <file leaf-file-name="signlink.java" pinned="false" current-in-tab="true">
         <entry file="file://$USER_HOME$/Desktop/f2p/src/sign/signlink.java">
@@ -96,7 +94,6 @@
         </entry>
       </file>
     </leaf>
->>>>>>> origin/master
   </component>
   <component name="FindManager">
     <FindUsagesManager>
