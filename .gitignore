@@ -5,6 +5,10 @@ ehthumbs.db
 # Folder config file
 Desktop.ini
 
+workspace.xml
+misc.xml
+*.xml
+
 # IntelliJ IDEA Project files
 *.idea
 
@@ -26,6 +30,14 @@ $RECYCLE.BIN/
 
 # OSX
 # =========================
+
+*.iml
+.idea
+*.classpath
+*.project
+
+data
+.idea
 
 .DS_Store
 .AppleDouble

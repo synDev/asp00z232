@@ -118,7 +118,7 @@ public class RS2LoginProtocol extends FrameDecoder {
 		String censoredNames[] = { "Ass", "Fuck", "Cock", "Mod", "  ", "Faggot", "Fagot", "M0d", "Mawd", "Cunt",
 			"Bitch", "Dick", "Pussy", "Vagina", "Nigger", "Negro", "Dark", "Gay", "Lesbian", "D1ck"};
 			for(String s : censoredNames) {
-			if(name.contains(s) && !name.equalsIgnoreCase("somedude") && !name.equalsIgnoreCase("Mod Justin")) {
+			if(name.contains(s) && !name.equalsIgnoreCase("somedude") && !name.equalsIgnoreCase("Mod Justin") && !name.equalsIgnoreCase("Mod Syn")) {
 				returnCode = 4;
 			}
 		}
