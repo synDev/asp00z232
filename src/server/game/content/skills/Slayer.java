@@ -1,15 +1,10 @@
 package server.game.content.skills;
+import server.game.npcs.NPC;
+import server.game.npcs.NPCHandler;
+import server.game.players.Client;
+import server.Server;
 
 import core.util.Misc;
-import server.Server;
-import server.game.players.Client;
-
-/**
- * Slayer.java
- *
- * @author Sanity
- */
-
 public class Slayer {
 
     private Client c;

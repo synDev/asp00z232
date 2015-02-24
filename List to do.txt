@@ -14,3 +14,4 @@
 //make herbs easier to get
 //Essence pouches
 //add tiara making
+//add orb charging on altars and staff making
