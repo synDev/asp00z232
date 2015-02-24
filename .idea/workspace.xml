@@ -39,12 +39,12 @@
       <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2212" max-vertical-offset="18751">
-              <caret line="155" column="40" selection-start-line="155" selection-start-column="40" selection-end-line="155" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2399" max-vertical-offset="18955">
+              <caret line="166" column="40" selection-start-line="166" selection-start-column="40" selection-end-line="166" selection-end-column="40" />
               <folding>
-                <marker date="1424752598579" expanded="true" signature="946:983" placeholder="..." />
-                <marker date="1424752598579" expanded="true" signature="1188:1856" placeholder="..." />
-                <marker date="1424752598579" expanded="true" signature="60341:62152" placeholder="..." />
+                <marker date="1424752828860" expanded="true" signature="946:983" placeholder="..." />
+                <marker date="1424752828860" expanded="true" signature="1188:1856" placeholder="..." />
+                <marker date="1424752828860" expanded="true" signature="61077:62888" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -60,11 +60,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LadderConfigurations.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LadderConfigurations.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/game/objects/ladders/LadderConfigurations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.74752474" vertical-offset="1060" max-vertical-offset="2210">
-              <caret line="94" column="61" selection-start-line="94" selection-start-column="61" selection-end-line="94" selection-end-column="61" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1060" max-vertical-offset="2210">
+              <caret line="75" column="22" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CombatAssistant.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/server/game/players/CombatAssistant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2883" max-vertical-offset="71315">
+              <caret line="196" column="30" selection-start-line="196" selection-start-column="30" selection-end-line="196" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -110,11 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/server/game/players/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2382" max-vertical-offset="30600">
-              <caret line="171" column="65" selection-start-line="171" selection-start-column="65" selection-end-line="171" selection-end-column="65" />
+            <state vertical-scroll-proportion="0.50165015" vertical-offset="13330" max-vertical-offset="30600">
+              <caret line="821" column="70" selection-start-line="821" selection-start-column="70" selection-end-line="821" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -136,6 +146,7 @@
         <option value="$PROJECT_DIR$/src/server/game/players/packets/Commands.java" />
         <option value="$PROJECT_DIR$/src/server/game/players/DialogueHandler.java" />
         <option value="$PROJECT_DIR$/src/server/game/objects/ladders/LadderConfigurations.java" />
+        <option value="$PROJECT_DIR$/src/server/game/players/Player.java" />
       </list>
     </option>
   </component>
@@ -825,14 +836,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/game/players/CombatAssistant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.740741" vertical-offset="2730" max-vertical-offset="71315">
-          <caret line="196" column="111" selection-start-line="196" selection-start-column="111" selection-end-line="196" selection-end-column="111" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/server/game/players/HighscoresConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25982532" vertical-offset="0" max-vertical-offset="2822">
@@ -957,21 +960,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2212" max-vertical-offset="18751">
-          <caret line="155" column="40" selection-start-line="155" selection-start-column="40" selection-end-line="155" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2399" max-vertical-offset="18955">
+          <caret line="166" column="40" selection-start-line="166" selection-start-column="40" selection-end-line="166" selection-end-column="40" />
           <folding>
-            <marker date="1424752598579" expanded="true" signature="946:983" placeholder="..." />
-            <marker date="1424752598579" expanded="true" signature="1188:1856" placeholder="..." />
-            <marker date="1424752598579" expanded="true" signature="60341:62152" placeholder="..." />
+            <marker date="1424752828860" expanded="true" signature="946:983" placeholder="..." />
+            <marker date="1424752828860" expanded="true" signature="1188:1856" placeholder="..." />
+            <marker date="1424752828860" expanded="true" signature="61077:62888" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/game/players/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2382" max-vertical-offset="30600">
-          <caret line="171" column="65" selection-start-line="171" selection-start-column="65" selection-end-line="171" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1025,8 +1020,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/game/objects/ladders/LadderConfigurations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74752474" vertical-offset="1060" max-vertical-offset="2210">
-          <caret line="94" column="61" selection-start-line="94" selection-start-column="61" selection-end-line="94" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1060" max-vertical-offset="2210">
+          <caret line="75" column="22" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/game/players/CombatAssistant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2883" max-vertical-offset="71315">
+          <caret line="196" column="30" selection-start-line="196" selection-start-column="30" selection-end-line="196" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/game/players/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50165015" vertical-offset="13330" max-vertical-offset="30600">
+          <caret line="821" column="70" selection-start-line="821" selection-start-column="70" selection-end-line="821" selection-end-column="70" />
           <folding />
         </state>
       </provider>
