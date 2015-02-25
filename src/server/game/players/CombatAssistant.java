@@ -242,7 +242,7 @@ public class CombatAssistant {
                     return;
                 }
 
-                if (!c.goodDistance(o.getX(), o.getY(), c.getX(), c.getY(), NPCHandler.npcSizes(i))) {
+                if (!c.goodDistance(o.getX(), o.getY(), c.getX(), c.getY(), NPCHandler.npcSizes(i)) && !c.usingRangeWeapon) {
                     return;
                 }
 
