@@ -726,11 +726,11 @@ public class Client extends Player {
             getPA().sendFrame126("@red@Offline", 28001);
         }
         if (isOnline("mod syn")) {
-            getPA().sendFrame126("Mod syn", 28002);
+            getPA().sendFrame126("Mod Syn", 28002);
             getPA().sendFrame126("@gre@Online", 28003);
         } else {
             getPA().sendFrame126("@red@Offline", 28003);
-            getPA().sendFrame126("Mod syn", 28002);
+            getPA().sendFrame126("Mod Syn", 28002);
         }
         if (isOnline(" ")) {
             getPA().sendFrame126("@whi@Open", 28004);//3rd
