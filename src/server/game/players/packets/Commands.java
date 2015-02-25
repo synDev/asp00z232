@@ -141,11 +141,20 @@ public class Commands implements PacketType {
                         }
                         if (c.playerRights == 3) {
                             Client c2 = (Client) PlayerHandler.players[j];
-                            c2.sendMessage("@red@[OWNER] @dbl@"
-                                    + Misc.capitalize(c.playerName)
-                                    + ": "
-                                    + Misc.optimizeText(playerCommand
-                                    .substring(5)) + "");
+                            if (c.playerName.equalsIgnoreCase("mod justin")) {
+                                c2.sendMessage("@red@[OWNER] @dbl@"
+                                        + Misc.capitalize(c.playerName)
+                                        + ": "
+                                        + Misc.optimizeText(playerCommand
+                                        .substring(5)) + "");
+                            } if (c.playerName.equalsIgnoreCase("mod syn")) {
+                                c2.sendMessage("@red@[CO-OWNER] @dbl@"
+                                        + Misc.capitalize(c.playerName)
+                                        + ": "
+                                        + Misc.optimizeText(playerCommand
+                                        .substring(5)) + "");
+                            }
+
                         }
                     }
                 }
