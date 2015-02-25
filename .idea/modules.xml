@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Client temp/Client temp.iml" filepath="$PROJECT_DIR$/Client temp/Client temp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NEW.iml" filepath="$PROJECT_DIR$/NEW.iml" />
       <module fileurl="file://$PROJECT_DIR$/Shilo.iml" filepath="$PROJECT_DIR$/Shilo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Shilo Village.iml" filepath="$PROJECT_DIR$/Shilo Village.iml" />
-      <module fileurl="file://$PROJECT_DIR$/asp00z232.iml" filepath="$PROJECT_DIR$/asp00z232.iml" />
     </modules>
   </component>
 </project>
