@@ -2734,6 +2734,9 @@ public class PlayerAssistant {
         if (c.freezeTimer > 0) {// prevents from moving lol
             return;
         }
+        if (c.usingRangeWeapon) {
+            return;
+        }
         for (int i = 0; i < NPCHandler.maxNPCs; i++) {
             if (NPCHandler.npcs[i] != null) {
                 if (NPCHandler.npcSizes(i) <= 1) {
