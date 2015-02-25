@@ -3044,6 +3044,11 @@ public class PlayerAssistant {
                 } else {
                     sendFrame126("Mod Justin @red@offline", 8147);  //Title
                 }
+                if (c.isOnline("mod syn")) {
+                    sendFrame126("Mod Syn is @gre@online", 8147);
+                } else {
+                    sendFrame126("Mod Syn @red@offline", 8147);  //Title
+                }
                 if (c.isOnline("test")) {
                     sendFrame126("Test is @gre@online", 8149);
                 } else {
