@@ -27,6 +27,11 @@ $RECYCLE.BIN/
 # OSX
 # =========================
 
+*.iml
+.idea
+*.classpath
+*.project
+
 .DS_Store
 .AppleDouble
 .LSOverride
