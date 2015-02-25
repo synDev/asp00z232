@@ -32,6 +32,9 @@ $RECYCLE.BIN/
 *.classpath
 *.project
 
+data
+.idea
+
 .DS_Store
 .AppleDouble
 .LSOverride
