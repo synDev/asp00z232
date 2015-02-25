@@ -125,6 +125,13 @@ public class ItemAssistant {
         return count;
     }
 
+    public boolean canAddToPouch() {
+        if (getItemAmount(7936) > 0) {
+            return true;
+        }
+        return false;
+    }
+
     public void sendItemsKept() {
         synchronized (c) {
             if (c.getOutStream() != null && c != null) {

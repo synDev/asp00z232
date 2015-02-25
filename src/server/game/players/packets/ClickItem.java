@@ -4,6 +4,8 @@ import core.util.Misc;
 import server.content.SpinningPlates;
 import server.content.randoms.Genie;
 import server.content.skills.HerbCleaning;
+import server.game.items.actions.pouch.EssencePouch;
+import server.game.items.actions.pouch.Pouch;
 import server.game.items.food.Food;
 import server.game.items.food.SpecialConsumables;
 import server.game.minigame.TreasureTrails;
@@ -39,6 +41,23 @@ public class ClickItem implements PacketType {
         if (SpecialConsumables.isConsumable(c, itemId, itemSlot))
             return;
         switch (itemId) {
+            /* Essence pouches */
+            /*case 5509:
+                EssencePouch smallPouch = new EssencePouch(Pouch.SMALL_POUCH);
+                smallPouch.addToPouch(c, smallPouch.getPouch());
+                break;
+            case 5510:
+                EssencePouch mediumPouch = new EssencePouch(Pouch.MEDIUM_POUCH);
+                mediumPouch.addToPouch(c, mediumPouch.getPouch());
+                break;
+            case 5512:
+                EssencePouch largePouch = new EssencePouch(Pouch.LARGE_POUCH);
+                largePouch.addToPouch(c, largePouch.getPouch());
+                break;
+            case 5514:
+                EssencePouch giantPouch = new EssencePouch(Pouch.GIANT_POUCH);
+                giantPouch.addToPouch(c, giantPouch.getPouch());
+                break;*/
             case 407:
                 int clam = Misc.random(2);
                 c.getItems().deleteItem(407, 1);

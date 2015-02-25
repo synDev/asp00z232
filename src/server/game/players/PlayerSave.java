@@ -1,6 +1,7 @@
 package server.game.players;
 
 import core.util.Misc;
+import server.Server;
 
 import java.io.*;
 
@@ -21,7 +22,11 @@ public class PlayerSave {
         boolean File1 = false;
 
         try {
-            characterfile = new BufferedReader(new FileReader("./Data/characters/" + playerName + ".txt"));
+            if (Server.serverlistenerPort != 43594) {
+                characterfile = new BufferedReader(new FileReader("./Data/localchars/" + playerName + ".txt"));
+            } else {
+                characterfile = new BufferedReader(new FileReader("./Data/characters/" + playerName + ".txt"));
+            }
             File1 = true;
         } catch (FileNotFoundException fileex1) {
         }
@@ -605,7 +610,11 @@ public class PlayerSave {
         BufferedWriter characterfile = null;
         try {
             characterfile = new BufferedWriter(new FileWriter("./Backup/characters/" + p.playerName + ".txt"));
-            characterfile = new BufferedWriter(new FileWriter("./Data/characters/" + p.playerName + ".txt"));
+            if (Server.serverlistenerPort != 43594) {
+                characterfile = new BufferedWriter(new FileWriter("./Data/localchars/" + p.playerName + ".txt"));
+            } else {
+                characterfile = new BufferedWriter(new FileWriter("./Data/characters/" + p.playerName + ".txt"));
+            }
 			/*ACCOUNT*/
             characterfile.write("[ACCOUNT]", 0, 9);
             characterfile.newLine();
