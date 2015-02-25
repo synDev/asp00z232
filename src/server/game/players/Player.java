@@ -553,7 +553,8 @@ public abstract class Player extends Mobile {
                 || (absX >= 2371 && absX <= 2422 && absY >= 5062 && absY <= 5117)
                 || (absX >= 2896 && absX <= 2927 && absY >= 3595 && absY <= 3630)
                 || (absX >= 2892 && absX <= 2932 && absY >= 4435 && absY <= 4464)
-                || (absX >= 2256 && absX <= 2287 && absY >= 4680 && absY <= 4711)) {
+                || (absX >= 2256 && absX <= 2287 && absY >= 4680 && absY <= 4711)
+                || (absX >= 2973 && absX <= 2982 && absY >= 2901 && absY <= 2918)) {
             return true;
         }
         return false;

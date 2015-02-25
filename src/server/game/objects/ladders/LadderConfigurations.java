@@ -74,10 +74,8 @@ public class LadderConfigurations {
                 return true;
             case 11741:
             case 1746:
-
                 if (c.heightLevel > 0) {
                     LadderHandler.climbLadder(c, c.absX, c.absY, c.heightLevel, c.heightLevel - 1);
-
                 }
                 return true;
             case 1738:

@@ -121,6 +121,10 @@ public class CombatAssistant {
                 c.getPA().stepAwayNew();
                 return;
             }
+            if (sameSpot && NPCHandler.npcSizes(i) >= 1) {
+                c.getPA().stepAwayNewB();
+                return;
+            }
            // if (c.npcIndex > 0) {
           //      if (NPCHandler.pathBlocked(o, c)) {
            //         if ((c.usingBow || c.usingMagic || /*usingOtherRangeWeapons || */c.autocasting/* || handCannon*/))
@@ -235,6 +239,10 @@ public class CombatAssistant {
                 if (!checkMagicReqs(c.spellId)) {
                     c.stopMovement();
                     c.npcIndex = 0;
+                    return;
+                }
+
+                if (!c.goodDistance(o.getX(), o.getY(), c.getX(), c.getY(), NPCHandler.npcSizes(i))) {
                     return;
                 }
 

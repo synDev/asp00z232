@@ -83,12 +83,6 @@ public class PlayerAssistant {
         return Barrows[(int) Math.floor(Math.random() * Barrows.length)];
     }
 
-    public boolean getCoords(int absX, int absY) {
-        if (c.getX() == absX && c.getY() == absY)
-            return true;
-        return false;
-    }
-
     /**
      * Checks if the player is in the region.
      *
@@ -96,6 +90,12 @@ public class PlayerAssistant {
      * @param absY
      * @return
      */
+    public boolean getCoords(int absX, int absY) {
+        if (c.getX() == absX && c.getY() == absY)
+            return true;
+        return false;
+    }
+
     public void rustySword(Client c) {
         int rusty = Misc.random(189);
         if (rusty <= 25) {
@@ -697,7 +697,7 @@ public class PlayerAssistant {
 
 
     /*
-	 * Tutorial island stuff
+     * Tutorial island stuff
 	 */
     public void sendFrame218(int i1) {
         //synchronized(c) {
@@ -889,8 +889,8 @@ public class PlayerAssistant {
 
         }
     }
-	/*/	c.getPA().sendFrame126("Demon Slayer", 7334);
-		c.getPA().sendFrame126("Dragon Slayer", 7335);
+    /*/	c.getPA().sendFrame126("Demon Slayer", 7334);
+        c.getPA().sendFrame126("Dragon Slayer", 7335);
 		c.getPA().sendFrame126("Dwarf Cannon", 7336);
 		c.getPA().sendFrame126("Herpquest", 7339);
 		c.getPA().sendFrame126("", 7338);
@@ -1004,7 +1004,6 @@ public class PlayerAssistant {
 
 	 }
 /*/
-
 
 
     public void sendString(String s, int id) {
@@ -1939,18 +1938,18 @@ public class PlayerAssistant {
 
 
             case 1162: // low alch
-                if(System.currentTimeMillis() - c.alchDelay > 1000) {
-                    if(c.getItems().playerHasItem(itemId, 1, c.getItems().getItemSlot(itemId))){
-                        if(!c.getCombat().checkMagicReqs(49)) {
+                if (System.currentTimeMillis() - c.alchDelay > 1000) {
+                    if (c.getItems().playerHasItem(itemId, 1, c.getItems().getItemSlot(itemId))) {
+                        if (!c.getCombat().checkMagicReqs(49)) {
                             break;
                         }
-                        if(itemId == 995) {
+                        if (itemId == 995) {
                             c.sendMessage("You can't alch coins.");
                             break;
                         }
-                        if(c.getItems().playerHasItem(itemId, 1, c.getItems().getItemSlot(itemId))){
+                        if (c.getItems().playerHasItem(itemId, 1, c.getItems().getItemSlot(itemId))) {
                             c.getItems().deleteItem(itemId, c.getItems().getItemSlot(itemId), 1);
-                            c.getItems().addItem(995, c.getShops().getItemShopValue(itemId)/3);
+                            c.getItems().addItem(995, c.getShops().getItemShopValue(itemId) / 3);
                             c.startAnimation(c.MAGIC_SPELLS[49][2]);
                             c.gfx100(c.MAGIC_SPELLS[49][3]);
                             c.alchDelay = System.currentTimeMillis();
@@ -1963,18 +1962,18 @@ public class PlayerAssistant {
                 break;
 
             case 1178: // high alch
-                if(System.currentTimeMillis() - c.alchDelay > 2000) {
-                    if(c.getItems().playerHasItem(itemId,  1, c.getItems().getItemSlot(itemId))){
-                        if(!c.getCombat().checkMagicReqs(50)) {
+                if (System.currentTimeMillis() - c.alchDelay > 2000) {
+                    if (c.getItems().playerHasItem(itemId, 1, c.getItems().getItemSlot(itemId))) {
+                        if (!c.getCombat().checkMagicReqs(50)) {
                             break;
                         }
-                        if(itemId == 995) {
+                        if (itemId == 995) {
                             c.sendMessage("You can't alch coins.");
                             break;
                         }
-                        if(c.getItems().playerHasItem(itemId,  1, c.getItems().getItemSlot(itemId))){
-                            c.getItems().deleteItem(itemId,  c.getItems().getItemSlot(itemId), 1);
-                            c.getItems().addItem(995, (int)(c.getShops().getItemShopValue(itemId)*.75));
+                        if (c.getItems().playerHasItem(itemId, 1, c.getItems().getItemSlot(itemId))) {
+                            c.getItems().deleteItem(itemId, c.getItems().getItemSlot(itemId), 1);
+                            c.getItems().addItem(995, (int) (c.getShops().getItemShopValue(itemId) * .75));
                             c.startAnimation(c.MAGIC_SPELLS[50][2]);
                             c.gfx100(c.MAGIC_SPELLS[50][3]);
                             c.alchDelay = System.currentTimeMillis();
@@ -2737,17 +2736,17 @@ public class PlayerAssistant {
         }
         for (int i = 0; i < NPCHandler.maxNPCs; i++) {
             if (NPCHandler.npcs[i] != null) {
-                //if (NPCHandler.npcSizes(i) <= 1) {
-                if (Region.getClipping(c.getX() - NPCHandler.npcSizes(i), c.getY() + NPCHandler.npcSizes(i), c.heightLevel, -NPCHandler.npcSizes(i), NPCHandler.npcSizes(i))) {
-                    c.getPA().walkToOld(-NPCHandler.npcSizes(i), NPCHandler.npcSizes(i));
-                } else if (Region.getClipping(c.getX() + NPCHandler.npcSizes(i), c.getY() - NPCHandler.npcSizes(i), c.heightLevel, NPCHandler.npcSizes(i), -NPCHandler.npcSizes(i))) {
-                    c.getPA().walkToOld(NPCHandler.npcSizes(i), -NPCHandler.npcSizes(i));
-                } else if (Region.getClipping(c.getX() + NPCHandler.npcSizes(i), c.getY() - NPCHandler.npcSizes(i), c.heightLevel, NPCHandler.npcSizes(i), -NPCHandler.npcSizes(i))) {
-                    c.getPA().walkToOld(NPCHandler.npcSizes(i), -NPCHandler.npcSizes(i));
-                } else if (Region.getClipping(c.getX() - NPCHandler.npcSizes(i), c.getY() + NPCHandler.npcSizes(i), c.heightLevel, -NPCHandler.npcSizes(i), NPCHandler.npcSizes(i))) {
-                    c.getPA().walkToOld(-NPCHandler.npcSizes(i), NPCHandler.npcSizes(i));
+                if (NPCHandler.npcSizes(i) <= 1) {
+                    if (Region.getClipping(c.getX() - NPCHandler.npcSizes(i), c.getY() + NPCHandler.npcSizes(i), c.heightLevel, -NPCHandler.npcSizes(i), NPCHandler.npcSizes(i))) {
+                        c.getPA().walkToOld(-NPCHandler.npcSizes(i), NPCHandler.npcSizes(i));
+                    } else if (Region.getClipping(c.getX() + NPCHandler.npcSizes(i), c.getY() - NPCHandler.npcSizes(i), c.heightLevel, NPCHandler.npcSizes(i), -NPCHandler.npcSizes(i))) {
+                        c.getPA().walkToOld(NPCHandler.npcSizes(i), -NPCHandler.npcSizes(i));
+                    } else if (Region.getClipping(c.getX() + NPCHandler.npcSizes(i), c.getY() - NPCHandler.npcSizes(i), c.heightLevel, NPCHandler.npcSizes(i), -NPCHandler.npcSizes(i))) {
+                        c.getPA().walkToOld(NPCHandler.npcSizes(i), -NPCHandler.npcSizes(i));
+                    } else if (Region.getClipping(c.getX() - NPCHandler.npcSizes(i), c.getY() + NPCHandler.npcSizes(i), c.heightLevel, -NPCHandler.npcSizes(i), NPCHandler.npcSizes(i))) {
+                        c.getPA().walkToOld(-NPCHandler.npcSizes(i), NPCHandler.npcSizes(i));
+                    }
                 }
-                // }
             }
         }
     }
@@ -2905,7 +2904,6 @@ public class PlayerAssistant {
                 return;
             }
         }
-
 
         if ((c.usingBow || c.mageFollow || (c.npcIndex > 0 && c.autocastId > 0)) && bowDistance && !sameSpot) {
             return;
