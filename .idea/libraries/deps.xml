@@ -1,16 +1,16 @@
 <component name="libraryTable">
   <library name="deps">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/deps/mina.jar!/" />
-      <root url="jar://$PROJECT_DIR$/deps/slf4j.jar!/" />
-      <root url="jar://$PROJECT_DIR$/deps/castlewars.jar!/" />
       <root url="jar://$PROJECT_DIR$/deps/slf4j-nop.jar!/" />
-      <root url="jar://$PROJECT_DIR$/deps/poi.jar!/" />
+      <root url="jar://$PROJECT_DIR$/deps/castlewars.jar!/" />
       <root url="jar://$PROJECT_DIR$/deps/mysql.jar!/" />
-      <root url="jar://$PROJECT_DIR$/deps/netty.jar!/" />
-      <root url="jar://$PROJECT_DIR$/deps/log4j-1.2.15.jar!/" />
-      <root url="jar://$PROJECT_DIR$/deps/xstream.jar!/" />
       <root url="jar://$PROJECT_DIR$/deps/collisionmap.jar!/" />
+      <root url="jar://$PROJECT_DIR$/deps/netty.jar!/" />
+      <root url="jar://$PROJECT_DIR$/deps/xstream.jar!/" />
+      <root url="jar://$PROJECT_DIR$/deps/slf4j.jar!/" />
+      <root url="jar://$PROJECT_DIR$/deps/poi.jar!/" />
+      <root url="jar://$PROJECT_DIR$/deps/mina.jar!/" />
+      <root url="jar://$PROJECT_DIR$/deps/log4j-1.2.15.jar!/" />
       <root url="jar://$PROJECT_DIR$/deps/jython.jar!/" />
       <root url="file://$PROJECT_DIR$/deps" />
     </CLASSES>

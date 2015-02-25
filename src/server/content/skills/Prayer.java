@@ -12,7 +12,7 @@ public class Prayer {
 
     Client c;
 
-    public int[][] bonesExp = {{526, 6}, {532, 17}, {3181, 17}, {534, 32}, {536, 75}, {6729, 130}, {3125, 15}, {3179, 6}};
+    public int[][] bonesExp = {{526, 9}, {532, 26}, {3181, 26}, {534, 48}, {536, 113}, {6729, 195}, {3125, 23}, {3179, 9}};
 
     public Prayer(Client c) {
         this.c = c;

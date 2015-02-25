@@ -1939,48 +1939,47 @@ public class PlayerAssistant {
 
 
             case 1162: // low alch
-                if (System.currentTimeMillis() - c.alchDelay > 1000) {
-                    if (c.getItems().playerHasItem(itemId, slot, 1)) {
-                        if (!c.getCombat().checkMagicReqs(49)) {
+                if(System.currentTimeMillis() - c.alchDelay > 1000) {
+                    if(c.getItems().playerHasItem(itemId, 1, c.getItems().getItemSlot(itemId))){
+                        if(!c.getCombat().checkMagicReqs(49)) {
                             break;
                         }
-                        if (itemId == 995) {
+                        if(itemId == 995) {
                             c.sendMessage("You can't alch coins.");
                             break;
                         }
-                        if (c.getItems().playerHasItem(itemId, slot, 1)) {
-                            c.getItems().deleteItem(itemId, slot, 1);
-                            c.getItems().addItem(995, c.getShops().getItemShopValue(itemId) / 3);
+                        if(c.getItems().playerHasItem(itemId, 1, c.getItems().getItemSlot(itemId))){
+                            c.getItems().deleteItem(itemId, c.getItems().getItemSlot(itemId), 1);
+                            c.getItems().addItem(995, c.getShops().getItemShopValue(itemId)/3);
                             c.startAnimation(c.MAGIC_SPELLS[49][2]);
                             c.gfx100(c.MAGIC_SPELLS[49][3]);
                             c.alchDelay = System.currentTimeMillis();
                             sendFrame106(6);
-                            addSkillXP(c.MAGIC_SPELLS[49][7] * 7, 6);
+                            addSkillXP(c.MAGIC_SPELLS[49][7] * Config.MAGIC_EXP_RATE, 6);
                             refreshSkill(6);
                         }
                     }
                 }
                 break;
 
-
             case 1178: // high alch
-                if (System.currentTimeMillis() - c.alchDelay > 2000) {
-                    if (c.getItems().playerHasItem(itemId, slot, 1)) {
-                        if (!c.getCombat().checkMagicReqs(50)) {
+                if(System.currentTimeMillis() - c.alchDelay > 2000) {
+                    if(c.getItems().playerHasItem(itemId,  1, c.getItems().getItemSlot(itemId))){
+                        if(!c.getCombat().checkMagicReqs(50)) {
                             break;
                         }
-                        if (itemId == 995) {
+                        if(itemId == 995) {
                             c.sendMessage("You can't alch coins.");
                             break;
                         }
-                        if (c.getItems().playerHasItem(itemId, slot, 1)) {
-                            c.getItems().deleteItem(itemId, slot, 1);
-                            c.getItems().addItem(995, (int) (c.getShops().getItemShopValue(itemId) * .75));
+                        if(c.getItems().playerHasItem(itemId,  1, c.getItems().getItemSlot(itemId))){
+                            c.getItems().deleteItem(itemId,  c.getItems().getItemSlot(itemId), 1);
+                            c.getItems().addItem(995, (int)(c.getShops().getItemShopValue(itemId)*.75));
                             c.startAnimation(c.MAGIC_SPELLS[50][2]);
                             c.gfx100(c.MAGIC_SPELLS[50][3]);
                             c.alchDelay = System.currentTimeMillis();
                             sendFrame106(6);
-                            addSkillXP(c.MAGIC_SPELLS[50][7] * 7, 6);
+                            addSkillXP(c.MAGIC_SPELLS[50][7] * Config.MAGIC_EXP_RATE, 6);
                             refreshSkill(6);
                         }
                     }
@@ -2721,19 +2720,6 @@ public class PlayerAssistant {
         if (c.freezeTimer > 0) {// prevents from moving lol
             return;
         }
-		/*for(int i = 0; i < NPCHandler.maxNPCs; i++) {
-			if(NPCHandler.npcs[i] != null) {
-		if (NPCHandler.npcSizes(i) > 0) {
-		if (Region.getClipping(c.getX() - NPCHandler.npcSizes(i), c.getY() + NPCHandler.npcSizes(i), c.heightLevel, -NPCHandler.npcSizes(i), NPCHandler.npcSizes(i))) {
-		c.getPA().walkToOld(-NPCHandler.npcSizes(i), NPCHandler.npcSizes(i));
-	     } else if (Region.getClipping(c.getX() + NPCHandler.npcSizes(i), c.getY() - NPCHandler.npcSizes(i), c.heightLevel, NPCHandler.npcSizes(i), -NPCHandler.npcSizes(i))) {
-		c.getPA().walkToOld(NPCHandler.npcSizes(i), -NPCHandler.npcSizes(i));
-	        } else if (Region.getClipping(c.getX() + NPCHandler.npcSizes(i), c.getY() - NPCHandler.npcSizes(i), c.heightLevel, NPCHandler.npcSizes(i), -NPCHandler.npcSizes(i))) {
-		c.getPA().walkToOld(NPCHandler.npcSizes(i), -NPCHandler.npcSizes(i));
-	        } else if (Region.getClipping(c.getX() - NPCHandler.npcSizes(i), c.getY() + NPCHandler.npcSizes(i), c.heightLevel, -NPCHandler.npcSizes(i), NPCHandler.npcSizes(i))) {
-		c.getPA().walkToOld(-NPCHandler.npcSizes(i), NPCHandler.npcSizes(i));
-				}
-		}}}*/
         if (Region.getClipping(c.getX() - 1, c.getY(), c.heightLevel, -1, 0)) {
             c.getPA().walkToOld(-1, 0);
         } else if (Region.getClipping(c.getX() + 1, c.getY(), c.heightLevel, 1, 0)) {

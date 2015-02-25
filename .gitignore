@@ -39,6 +39,8 @@ $RECYCLE.BIN/
 data
 .idea
 
+idea/
+
 .DS_Store
 .AppleDouble
 .LSOverride

@@ -590,15 +590,15 @@ public class NPCHandler {
 
     public void stepAway(int i) {
 
-        if (Region.getClipping(npcs[i].getX() + 1, npcs[i].getY(), npcs[i].heightLevel, 1, 0)) {
-            npcs[i].moveX = 1;
-            npcs[i].moveY = 0;
+        if (Region.getClipping(npcs[i].getX(), npcs[i].getY() - 1, npcs[i].heightLevel, 0, -1)) {
+            npcs[i].moveX = 0;
+            npcs[i].moveY = -1;
         } else if (Region.getClipping(npcs[i].getX() - 1, npcs[i].getY(), npcs[i].heightLevel, -1, 0)) {
             npcs[i].moveX = -1;
             npcs[i].moveY = 0;
-        } else if (Region.getClipping(npcs[i].getX(), npcs[i].getY() - 1, npcs[i].heightLevel, 0, -1)) {
-            npcs[i].moveX = 0;
-            npcs[i].moveY = -1;
+        } else if (Region.getClipping(npcs[i].getX() + 1, npcs[i].getY(), npcs[i].heightLevel, 1, 0)) {
+            npcs[i].moveX = 1;
+            npcs[i].moveY = 0;
         } else if (Region.getClipping(npcs[i].getX(), npcs[i].getY() + 1, npcs[i].heightLevel, 0, 1)) {
             npcs[i].moveX = 0;
             npcs[i].moveY = 1;
@@ -1826,6 +1826,11 @@ public class NPCHandler {
                     if (player != null && getNpcListCombat(npcs[i].npcType) * 2 > player.combatLevel) {
                         npcs[i].killerId = getCloseRandomPlayer(i);
                     }
+                } else if (npcs[i].inWild()) {
+                    Client player = (Client) PlayerHandler.players[getCloseRandomPlayer(i)];
+                    if (player != null && getNpcListCombat(npcs[i].npcType) * 2 > player.combatLevel) {
+                        npcs[i].killerId = getCloseRandomPlayer(i);
+                    }
                 }
                 if (npcs[i].npcType == 3618 || npcs[i].npcType == 3619) {
                     Client player = (Client) PlayerHandler.players[getCloseRandomPlayer(i)];
@@ -2346,9 +2351,9 @@ public class NPCHandler {
         }
     }
 
-    private int getRandomMask() {
-        int[] phats = {1038, 1040, 1042, 1044, 1046, 1048};
-        return phats[(int) Math.floor(Math.random() * phats.length)];
+    private int getRandomHItem() {
+        int[] Hitems = {1050, 1050};
+        return Hitems[(int) Math.floor(Math.random() * Hitems.length)];
     }
 
     public void dropItems(int i) {
@@ -2363,11 +2368,11 @@ public class NPCHandler {
             if (npcs[i].npcType == 912 || npcs[i].npcType == 913 || npcs[i].npcType == 914)
                 c.magePoints += 1;
             if (c != null) {
-                int cracker = Misc.random(290 - getNpcListCombat(npcs[i].npcType));
+                int cracker = Misc.random(1000 - getNpcListCombat(npcs[i].npcType));
                 if (cracker == 0) {
-                    Server.itemHandler.createGroundItem(c, getRandomMask(), npcs[i].absX, npcs[i].absY, 1, c.playerId);
+                    Server.itemHandler.createGroundItem(c, getRandomHItem(), npcs[i].absX, npcs[i].absY, 1, c.playerId);
                     if (c.rareOn != false) {
-                        c.getPA().handledropOn(c, getRandomMask(), 1);
+                        c.getPA().handledropOn(c, getRandomHItem(), 1);
                         return;
                     }
                 }
@@ -3113,7 +3118,7 @@ public class NPCHandler {
                                 || (playerX > npcs[i].getX() && playerY == npcs[i].getY())
                                 || (playerX > npcs[i].getX() && playerY == npcs[i].getY())
                                 || (playerX > npcs[i].getX() && playerY > npcs[i].getY()))
-                            if (!goodDistance(npcs[i].getX(), npcs[i].getY(), playerX, playerY, npcSizes(i)))
+                            if (!goodDistance(npcs[i].getX(), npcs[i].getY(), playerX, playerY, npcSizes(i)+1))
                                 return;
                     } else {
                         if (!goodDistance(npcs[i].getX(), npcs[i].getY(), playerX, playerY, distanceRequired(i)))

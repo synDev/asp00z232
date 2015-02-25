@@ -455,7 +455,7 @@ public class Client extends Player {
         sendMessage("Welcome to " + Config.SERVER_NAME + ".");
         sendMessage("Toggle loot showing by typing @blu@::showloot");
         sendMessage("To see the most recent updates type @blu@::changelog.");
-        sendMessage("@blu@Until February 24, all npcs have chance to drop party hats!");
+        sendMessage("@blu@Until February 28, all npcs have chance to drop a santa hat!");
         sendMessage("Visit forums at @blu@http://shilovillageos.tk/");
         if (Config.doubleEXPWeekend == true) {
             sendMessage("@blu@Enjoy Double EXP Weekend!");
