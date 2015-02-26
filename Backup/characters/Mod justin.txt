@@ -1,0 +1,192 @@
+[ACCOUNT]
+character-username = Mod justin
+character-password = f9ded2fddf
+
+[CHARACTER]
+character-height = 0
+character-posx = 2870
+character-posy = 2954
+character-rights = 3
+exp-gained = 318254588
+whirl-time = 0
+whirl-pool = false
+home-timer = 0
+flour-amount = 0
+brightness = 4
+isRunning = true
+soundEnabled = false
+bankPin = 
+setPin = false
+splitChat = true
+RatDied2 = false
+sedridor = false
+aubury = false
+tutorial-progress = 0
+lastLoginDate = 0
+character-energy = 100
+last-X = 0
+last-Y = 0
+pLastX = 0
+pLastY = 0
+pLastH = 0
+quest-points = 5
+sailorindistress = 2
+cooks-assistant = 6
+dorics-quest = 0
+knight-sword = 0
+rune-mysteries = 0
+restless-ghost = 0
+sheep-shearer = 0
+imp-catcher = 0
+witchs-potion = 0
+vampire-slayer = 5
+dorics-quest = 0
+has-npc = false
+summonId = -1
+crystal-bow-shots = 65
+skull-timer = -1
+play-time = 3279876
+magic-book = 0
+special-amount = 10.0
+music = false	false	false	false	true	false	true	true	false	false	true	false	true	true	false	false	false	true	false	false	true	false	false	false	false	false	true	false	true	false	true	false	false	false	false	false	false	false	false	false	false	false	false	false	false	false	false	false	true	false	true	false	false	false	
+teleblock-length = 0
+pc-points = 0
+slayerTask = 416
+taskAmount = 45
+slPoints = 0
+autoRet = 1
+flagged = false
+fightMode = 1
+void = 0	0	0	0	0
+
+[EQUIPMENT]
+character-equip = 0	1053	1	
+character-equip = 1	-1	1	
+character-equip = 2	1725	1	
+character-equip = 3	7809	1	
+character-equip = 4	5553	1	
+character-equip = 5	-1	1	
+character-equip = 6	-1	0	
+character-equip = 7	5555	1	
+character-equip = 8	-1	0	
+character-equip = 9	-1	1	
+character-equip = 10	2577	1	
+character-equip = 11	-1	0	
+character-equip = 12	7927	1	
+character-equip = 13	78	989	
+
+[LOOK]
+character-look = 0	0
+character-look = 1	1
+character-look = 2	18
+character-look = 3	26
+character-look = 4	33
+character-look = 5	36
+character-look = 6	42
+character-look = 7	10
+character-look = 8	0
+character-look = 9	0
+character-look = 10	0
+character-look = 11	0
+character-look = 12	0
+
+[SKILLS]
+character-skill = 0	99	17486067
+character-skill = 1	99	45069844
+character-skill = 2	99	46396873
+character-skill = 3	99	13288858
+character-skill = 4	99	45154102
+character-skill = 5	89	45005782
+character-skill = 6	99	45093294
+character-skill = 7	21	5190
+character-skill = 8	36	25811
+character-skill = 9	24	7102
+character-skill = 10	99	13037272
+character-skill = 11	99	13042102
+character-skill = 12	99	13036792
+character-skill = 13	99	13047852
+character-skill = 14	99	13060715
+character-skill = 15	99	13036852
+character-skill = 16	99	13087959
+character-skill = 17	99	13035809
+character-skill = 18	99	13034752
+character-skill = 19	99	13034752
+character-skill = 20	99	13036614
+character-skill = 21	1	0
+character-skill = 22	1	0
+character-skill = 23	1	0
+character-skill = 24	1	0
+
+[ITEMS]
+character-item = 0	893	1
+character-item = 1	558	10000
+character-item = 2	557	10000
+character-item = 3	564	1000
+character-item = 4	4152	1
+character-item = 5	3284	1
+character-item = 6	3285	1
+
+[BANK]
+character-bank = 0	49	26
+character-bank = 1	1522	2
+character-bank = 2	1500	1
+character-bank = 3	1499	1
+character-bank = 4	256	1
+character-bank = 5	254	1
+character-bank = 6	1498	1
+character-bank = 7	441	25
+character-bank = 8	4741	1
+character-bank = 9	1784	4
+character-bank = 10	1950	1
+character-bank = 11	1945	6
+character-bank = 12	1964	27
+character-bank = 13	437	8
+character-bank = 14	885	2
+character-bank = 15	6667	1
+character-bank = 16	3281	1
+character-bank = 17	61	15
+character-bank = 18	840	6
+
+[FRIENDS]
+character-friend = 0	7791861214
+character-friend = 1	2994387824584962
+character-friend = 2	24440153
+character-friend = 3	295370487
+character-friend = 4	167015451
+character-friend = 5	2652325737279607
+character-friend = 6	1689811765057023262
+character-friend = 7	1025881
+character-friend = 8	26950
+character-friend = 9	33559717504875
+character-friend = 10	200015967122483176
+character-friend = 11	57932455953926
+character-friend = 12	1855137231112
+character-friend = 13	24636126
+character-friend = 14	6382233392
+character-friend = 15	172647
+character-friend = 16	6578208675940633162
+character-friend = 17	18333322530
+character-friend = 18	1592401482283435
+character-friend = 19	1273997118741
+character-friend = 20	1352191
+character-friend = 21	5681563
+character-friend = 22	860296217
+character-friend = 23	57343153419304
+character-friend = 24	93981055
+character-friend = 25	20694142
+character-friend = 26	1127090305
+character-friend = 27	1143323291
+character-friend = 28	28
+character-friend = 29	671222
+character-friend = 30	36997975416
+character-friend = 31	43183939
+character-friend = 32	1455044971939
+character-friend = 33	21096389
+character-friend = 34	31180877110
+character-friend = 35	1490
+character-friend = 36	1535909904
+character-friend = 37	292705779115311
+character-friend = 38	1842197798881
+
+[EOF]
+
