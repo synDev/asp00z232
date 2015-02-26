@@ -2182,7 +2182,7 @@ for (int i = 0; i < Config.MAX_PLAYERS; i++) {
                 c.getItems().addItem(1779, 1);
                 c.startAnimation(827);
                 c.sendMessage("You pick some flax.");
-                if (Misc.random(2) == 1) {
+                if (Misc.random(3) == 1) {
                     new Object(-1, obX, obY, 0, 1, 10, 2646, 10);
                 }
                 break;
