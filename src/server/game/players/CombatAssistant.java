@@ -242,10 +242,6 @@ public class CombatAssistant {
                     return;
                 }
 
-                if (!c.goodDistance(o.getX(), o.getY(), c.getX(), c.getY(), NPCHandler.npcSizes(i)) && !c.usingRangeWeapon) {
-                    return;
-                }
-
                 c.faceUpdate(i);
                 c.slayerMaskEffect = c.playerEquipment[c.playerHat] == 3432 && c.slayerTask == i;
                 //c.specAccuracy = 1.0;
